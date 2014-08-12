@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<% if flash[:message] %>
+  <div style="padding: 3px 3px 3px 3px; background-color: yellow; color: black; margin: 10px 0 10px 0;">
+    <%= flash[:message] %>
+  </div>
+<% end %>
+
 <%= yield %>
 
 </body>
