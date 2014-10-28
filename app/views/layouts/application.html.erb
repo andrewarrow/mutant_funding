@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<%=link_to 'Home', root_path %> |
+<%=link_to 'See All Listings', listings_path %>
+
 <% if flash[:message] %>
   <div style="padding: 3px 3px 3px 3px; background-color: yellow; color: black; margin: 10px 0 10px 0;">
     <%= flash[:message] %>
