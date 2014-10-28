@@ -1,1 +1,17 @@
-change me
+<h1>Listings</h1> 
+ 
+<table>
+  <tr>
+    <th>Mutant</th> 
+    <th>Amount</th>
+  </tr>
+ 
+<% @listVariable.each do |listItem| %>  
+  <tr>
+    <td><%= listItem.mutant %></td> 
+    <td><%= listItem.amount %></td> 
+  </tr>
+<% end %> 
+</table>
+ 
+
