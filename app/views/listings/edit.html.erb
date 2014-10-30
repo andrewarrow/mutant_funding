@@ -1,0 +1,12 @@
+<form method="post" action="/listings/<%= @listVariable.id%>">
+Mutant: 
+<input type="text" name="mutantName" value="<%= @listVariable.mutant%>"/>
+<br/>
+Amount Requested: 
+<input type="text" name="amountRequested" value="<%= @listVariable.amount%>"/>
+<input type="hidden" name="_method" value="patch"/>
+<input type="submit" value="Update"/>
+
+
+</form>
+

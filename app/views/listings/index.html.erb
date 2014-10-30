@@ -4,12 +4,14 @@
   <tr>
     <th>Mutant</th> 
     <th>Amount</th>
+    <th></th>
   </tr>
  
 <% @listVariable.each do |listItem| %>  
   <tr>
     <td><%= listItem.mutant %></td> 
     <td><%= listItem.amount %></td> 
+    <td><%= link_to "Edit Request", edit_listing_path(listItem) %></td>
   </tr>
 <% end %> 
 </table>
