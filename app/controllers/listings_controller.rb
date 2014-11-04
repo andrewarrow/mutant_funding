@@ -11,8 +11,17 @@ class ListingsController < ApplicationController
   def update
   	listVariable = Listing.find(params[:id]) #fetches a particular listing.
     listVariable.amount = params[:amountRequested] #updates the amount requested to the amount in the form edit.html.erb
-    listVariable.save  #TO DO: make sure if bad value don't redirect, gives an error, lets people change it. 
-  	redirect_to listings_path #redirects so a person can't submit twice. 
+    
+    listVariable.valid?
+
+    if listVariable.save #saves as a listing
+     flash[:message] = 'Changed Amount Successfully!'
+     redirect_to listings_path
+    else
+     flash[:message] = 'Invalid entry, please try again.'
+     redirect_to edit_listing_path
+    end
+
   end
 
 end
